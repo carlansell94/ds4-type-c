@@ -1,3 +1,15 @@
+# Fork Details
+This is a fork of an older version of the DS4 USB type C board, which adds screw holes to the 030 and 040 055 PCBs. These boards have also been altered to have slightly more finger-friendly corners.
+
+The zero-ohm resistors use for matching the lengths of the data lines to the applicable connector have been removed to free up space for the screw hole.
+
+This is based on an older version of the original board as I already had the LEDs from these older designs available, and the LED used by the newer design seems to have limited availability in the UK.
+
+Both boards have been tested and installed in controllers.
+
+
+# Original Readme
+
 # DS4-Type-C
 Hate microUSB? Looking to decrease cable clutter? This is the PS4 mod for you. This repo aims to host mostly drop-in USB Type C replacement boards for all revisions of PS4 controller. The goal for each board is to follow the USB Type C standard, and to include pads for those who wish to impedance match the USB data lines. Either solder in resistors here to compensate, or simply use a solder/wire bridge. The overall project goal is to keep all possible parts the same between boards, and to make it reasonablly easy for a person of moderate skill to populate these boards. This is an open source project though, so you're free to download [KiCad](https://www.kicad.org/download/) and start making modifications to these boards so that you can more easily populate them.
 

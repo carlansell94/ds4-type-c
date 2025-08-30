@@ -49,16 +49,10 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.25
+          "min_clearance": 0.2
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
@@ -132,7 +126,7 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.2,
+        "min_copper_edge_clearance": 0.025,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
@@ -142,10 +136,10 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.2,
+        "min_through_hole_diameter": 0.3,
         "min_track_width": 0.15,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.4,
+        "min_via_diameter": 0.6,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -429,7 +423,6 @@
     "rule_severities": {
       "bus_definition_conflict": "error",
       "bus_entry_needed": "error",
-      "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
       "different_unit_footprint": "error",
@@ -477,14 +470,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "030.kicad_pro",
+    "filename": "040 055.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.175,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -495,9 +488,9 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "via_diameter": 0.4,
-        "via_drill": 0.2,
+        "track_width": 0.25,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       }
     ],
@@ -509,31 +502,15 @@
     "netclass_patterns": [
       {
         "netclass": "Default",
-        "pattern": "+5V"
+        "pattern": "/d+"
       },
       {
         "netclass": "Default",
-        "pattern": "/Annode"
+        "pattern": "/d-"
       },
       {
         "netclass": "Default",
-        "pattern": "/B"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/D+"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/D-"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/G"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/R"
+        "pattern": "/vcc"
       },
       {
         "netclass": "Default",
@@ -541,19 +518,51 @@
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J2-PadA5)"
+        "pattern": "Net-(D1-Pad1)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J2-PadA8)"
+        "pattern": "Net-(D1-Pad2)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J2-PadB5)"
+        "pattern": "Net-(D1-Pad3)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J2-PadB8)"
+        "pattern": "Net-(D1-Pad4)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-PadA5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-PadA8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-PadB5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-PadB8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J2-Pad3)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J2-Pad4)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J3-Pad3)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J3-Pad4)"
       }
     ]
   },
@@ -561,11 +570,11 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "030.net",
+      "netlist": "040 055.net",
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "030-copy.step",
+      "step": "",
       "svg": "",
       "vrml": ""
     },
@@ -672,15 +681,6 @@
       "version": 1
     },
     "net_format_name": "Pcbnew",
-    "ngspice": {
-      "fix_include_paths": true,
-      "fix_passive_vals": false,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 0,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "./",
     "space_save_all_events": true,
@@ -696,7 +696,7 @@
   },
   "sheets": [
     [
-      "3c2c7c56-f330-417e-b07f-cf61a7c705bd",
+      "e4e72b74-dfcb-4da6-a1db-e42031932d38",
       "Root"
     ]
   ],
